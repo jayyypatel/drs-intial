@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harsh.drs_initial.SecondaryController">
+   <children>
+      <Text fill="#ff0000" layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRS Initial">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="130.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-padding: 10px 20px;" text="Report Disaster" />
+      <Button layoutX="274.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-padding: 10px 20px;" text="Assess Disaster" />
+      <Button layoutX="413.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCoordinate" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-padding: 10px 20px;" text="Coordination" />
+      <Text layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assess Disaster">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="disasterTable" layoutX="19.0" layoutY="129.0" prefHeight="255.0" prefWidth="478.0" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-width: 1px; -fx-border-radius: 5px;">
+        <columns>
+          <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="locationColumn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="severityColumn" prefWidth="75.0" text="Severity" />
+            <TableColumn fx:id="priorityColumn" prefWidth="75.0" text="Priority" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="138.4000244140625" text="Description" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
